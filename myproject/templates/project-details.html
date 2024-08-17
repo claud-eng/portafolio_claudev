@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Detalles del proyecto</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'home' %}">Index</a></li>
+            <li class="current">Detalles del proyecto</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Project Details Section -->
+    <section id="projects-details" class="projects-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="projects-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                  "navigation": {
+                    "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/app-2.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/app-2.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/app-2.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/app-2.jpg' %}" alt="">
+                </div>
+
+              </div>
+  
+              <!-- Agregar botones de navegación -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="project-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="project-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+              <!-- Botón Volver Atrás centrado -->
+              <div style="text-align: center;">
+                <button onclick="window.history.back();" style="
+                  padding: 10px 20px;
+                  background-color: #139ddc;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+                ">Volver atrás</button>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Project Details Section -->
+
+    <!-- Estilos directamente en el HTML -->
+    <style>
+      .swiper-button-next, .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        width: 27px;
+        height: 44px;
+        margin-top: -22px;
+        z-index: 10;
+        cursor: pointer;
+        background-size: 27px 44px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+      }
+    
+      .swiper-button-next {
+        right: 10px;
+        background-image: url('/path-to-your-right-arrow-icon.svg');
+      }
+    
+      .swiper-button-prev {
+        left: 10px;
+        background-image: url('/path-to-your-left-arrow-icon.svg');
+      }
+
+      .projects-details-slider {
+          position: relative;
+      }
+
+      .swiper-wrapper {
+          display: flex;
+          align-items: center;
+      }
+
+      .projects-info, .projects-description {
+          position: relative;
+          z-index: 1;
+      }
+  </style>
+
+  </main>
+
+{% endblock %}

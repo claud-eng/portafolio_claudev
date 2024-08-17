@@ -1,0 +1,196 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portafolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="{% static 'assets/img/my-profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="{% url 'home' %}" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="{% static 'assets/img/logo.png' %}" alt=""> -->
+      <h1 class="sitename">Claudio Zamorano</h1>
+    </a>
+
+    <div class="social-links text-center">
+        <a href="https://github.com/claud-eng?tab=repositories" class="github" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/claudio-zamorano-urrutia/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'home' %}#index" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
+          <li><a href="{% url 'home' %}#about"><i class="bi bi-person navicon"></i> Sobre mí</a></li>
+          <li><a href="{% url 'home' %}#skills"><i class="bi bi-person navicon"></i> Conocimientos</a></li>
+          <li><a href="{% url 'home' %}#experience"><i class="bi bi-file-earmark-text navicon"></i> Experiencia</a></li>
+          <li><a href="{% url 'home' %}#projects"><i class="bi bi-images navicon"></i> Proyectos</a></li>
+          <li><a href="{% url 'home' %}#contact"><i class="bi bi-envelope navicon"></i> Contacto</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Portafolio</strong> <span>Todos los derechos reservados</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Desarrollado por Claudio Zamorano</a>
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/56940635844" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <!-- Script para enviar el formulario sin recargar la página -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        const loadingIndicator = document.querySelector('.loading');
+        const submitButton = document.getElementById('submit-button');
+        const errorMessage = document.querySelector('.error-message');
+        
+        // Oculta siempre los elementos de loading, success-message, y error-message inicialmente
+        loadingIndicator.style.display = 'none';
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Evita el envío tradicional
+            
+            submitButton.style.display = 'none';  // Oculta el botón de envío
+            loadingIndicator.style.display = 'block';  // Muestra el mensaje de "Enviando..."
+            
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value,
+                },
+            })
+            .then(response => {
+                loadingIndicator.style.display = 'none';  // Oculta el mensaje de "Enviando..."
+                
+                if (response.ok) {
+                    successMessage.style.display = 'block';  // Muestra el mensaje de éxito
+                    form.reset();  // Limpia los campos del formulario
+                    
+                    // Después de 10 segundos, oculta el mensaje de éxito y muestra el botón de envío nuevamente
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';  // Oculta el mensaje de éxito
+                        submitButton.style.display = 'inline-block';  // Muestra el botón de envío
+                    }, 10000); // 10000 ms = 10 segundos
+                } else {
+                    return response.text().then(text => { throw new Error(text); });
+                }
+            })
+            .catch(error => {
+                loadingIndicator.style.display = 'none';  // Oculta el mensaje de "Enviando..." en caso de error
+                submitButton.style.display = 'inline-block';  // Vuelve a mostrar el botón de envío en caso de error
+                console.error('Error:', error);
+                // Puedes mostrar un mensaje de error al usuario aquí
+            });
+        });
+    });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script>
+    $(window).on('load', function() {
+        // Inicializa Isotope y establece el filtro predeterminado.
+        var $isotopeContainer = $('.isotope-layout').isotope({
+            filter: '.filter-web',
+            layoutMode: 'masonry',
+            sortBy: 'original-order'
+        });
+
+        // Configura los botones de filtro para cambiar dinámicamente.
+        $('.projects-filters').on('click', 'li', function() {
+            var filterValue = $(this).attr('data-filter');
+            $isotopeContainer.isotope({ filter: filterValue });
+            $('.projects-filters li').removeClass('filter-active');
+            $(this).addClass('filter-active');
+        });
+    });
+    </script>
+    </body>
+
+</html>

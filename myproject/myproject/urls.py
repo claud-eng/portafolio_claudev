@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.shortcuts import render
 from django.contrib.auth import views as auth_views
 from . import views
+from django.views.generic import TemplateView
+from .views import enviar_correo_formulario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda request: render(request, 'index.html'), name='home'),
-    path('portfolio_details/', views.portfolio_details, name='portfolio_details'),
-    path('service_details/', views.service_details, name='service_details'),
-    path('starter_page/', views.starter_page, name='starter_page'),
+    path('project_details/', views.project_details, name='project_details'),
+    path('web_app_1/', views.web_app_1, name='web_app_1'),
+    path('contact/', enviar_correo_formulario, name='contact'),
 ]
