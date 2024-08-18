@@ -3,3 +3,6 @@
 
 # Ignorar la carpeta env
 env/
+
+# Ignorar el archivo myproject.tar
+myproject.tar
